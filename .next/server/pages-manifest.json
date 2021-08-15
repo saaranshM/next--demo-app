@@ -1,10 +1,6 @@
 {
-  "/[id]": "pages/[id].js",
   "/_app": "pages/_app.js",
-  "/api/new": "pages/api/new.js",
-  "/": "pages/index.js",
-  "/new": "pages/new.html",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/404": "pages/404.html"
+  "/[id]": "pages/[id].js"
 }

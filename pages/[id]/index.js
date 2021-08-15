@@ -21,9 +21,7 @@ const MeetupDetails = (props) => {
 };
 
 export const getStaticPaths = async () => {
-  const client = await MongoClient.connect(
-    "mongodb+srv://admin:test1234@cluster0.r0zao.mongodb.net/meetups?retryWrites=true&w=majority"
-  );
+  const client = await MongoClient.connect(process.env.MONGODB_URI);
 
   const db = client.db();
   const meetupsCollections = db.collection("meetups");
@@ -41,9 +39,7 @@ export const getStaticProps = async (context) => {
   const id = context.params.id;
   console.log(id);
 
-  const client = await MongoClient.connect(
-    "mongodb+srv://admin:test1234@cluster0.r0zao.mongodb.net/meetups?retryWrites=true&w=majority"
-  );
+  const client = await MongoClient.connect(process.env.MONGODB_URI);
 
   const db = client.db();
   const meetupsCollections = db.collection("meetups");
